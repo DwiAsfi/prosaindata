@@ -406,7 +406,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span> <span class="c1">#Fungsi Digraph adalah fungsi untuk membuat graph yang berarah</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">),(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">),(</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">),(</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">),(</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">),(</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">),(</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">),(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">),(</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">),(</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">),(</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">),(</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">),(</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">)])</span>
 </pre></div>
 </div>
 </div>
@@ -418,7 +418,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/02ef9f8cf3b1e9a965a8ceaa1e09e374bf4b4998a7b9a73077b8ef9aa21e4841.png" src="_images/02ef9f8cf3b1e9a965a8ceaa1e09e374bf4b4998a7b9a73077b8ef9aa21e4841.png" />
+<img alt="_images/edc643edbc102c4d331a24f177a93cc1f8d8373ed605bb1701f3937a646c5080.png" src="_images/edc643edbc102c4d331a24f177a93cc1f8d8373ed605bb1701f3937a646c5080.png" />
 </div>
 </div>
 <ul class="simple">
@@ -445,36 +445,10 @@ document.write(`
 <li><p>Iterasi 1 : melakukan perhitungan sesuai dengan rumus yaitu melakukan perhitungan  <strong>(1-damping factor)/(jumlah banyaknya node)</strong>. kemudian ditambah dengan <strong>damping factor * (jumlahkan setiap nodes PR, dimana PR(B) terhubung dengan nodes PR(A)/jumlah line yang keluar dari nodes PR(B))</strong></p></li>
 <li><p>Kemudian lakukan perhitungan pada langkah ke 2 pada iterasi selanjutnya.</p></li>
 </ol>
-<p>Perhitungan Manual</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="mf">0.85</span> <span class="c1"># Damping factor</span>
-<span class="n">max_iter</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1.0e-6</span>
-<span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span>
-<span class="n">pagerank</span> <span class="o">=</span> <span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">(),</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iter</span><span class="p">):</span>
-    <span class="n">diff</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">():</span>
-        <span class="n">rank</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">d</span>
-        <span class="k">for</span> <span class="n">neighbor</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">neighbors</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
-            <span class="n">rank</span> <span class="o">+=</span> <span class="n">d</span> <span class="o">*</span> <span class="n">pagerank</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span> <span class="o">/</span> <span class="n">G</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="n">neighbor</span><span class="p">)</span>
-        <span class="n">diff</span> <span class="o">+=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pagerank</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">-</span> <span class="n">rank</span><span class="p">)</span>
-        <span class="n">pagerank</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">rank</span>
-    <span class="k">if</span> <span class="n">diff</span> <span class="o">&lt;</span> <span class="n">N</span> <span class="o">*</span> <span class="n">tolerance</span><span class="p">:</span>
-        <span class="k">break</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil Perhitungan:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">pagerank</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Perhitungan:
- {1: 0.3208032316090249, 2: 0.2924378129525204, 3: 0.20693222359728608, 4: 0.2011899513983847, 6: 0.2408942489558904, 5: 0.26791661155377644, 9: 0.21672658365064976, 8: 0.23550572934431352, 7: 0.20119002790312673}
-</pre></div>
-</div>
-</div>
-</div>
+<ul class="simple">
+<li><p>Perhitungan Manual</p></li>
+</ul>
+<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/192yKoDJ1h5zHQVfu9U53roY-WW1TKnIUG7-ZXustOdg/edit?usp=sharing">https://docs.google.com/spreadsheets/d/192yKoDJ1h5zHQVfu9U53roY-WW1TKnIUG7-ZXustOdg/edit?usp=sharing</a></p>
 <ul class="simple">
 <li><p>Hitung menggunakan pagerank menggunakan networkx</p></li>
 </ul>
@@ -486,15 +460,15 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: 0.19267397329797498,
- 2: 0.09855381632742174,
- 3: 0.09855381632742174,
- 4: 0.05855168310095565,
- 6: 0.20706909252766145,
- 5: 0.1423217159695336,
- 9: 0.01666666666666667,
- 8: 0.0913205958767592,
- 7: 0.09428863990560493}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: 0.18504557325711096,
+ 2: 0.09531171077499326,
+ 3: 0.09531171077499326,
+ 4: 0.057173806009011584,
+ 6: 0.1980944205123369,
+ 5: 0.09768094535135649,
+ 9: 0.057173806009011584,
+ 8: 0.10677947899694076,
+ 7: 0.1074285483142452}
 </pre></div>
 </div>
 </div>
@@ -506,7 +480,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 1, 5, 2, 3, 7, 8, 4, 9]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 1, 7, 8, 5, 2, 3, 4, 9]
 </pre></div>
 </div>
 </div>
@@ -527,8 +501,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: PyPDF2 in /usr/local/lib/python3.9/dist-packages (3.0.1)
-Requirement already satisfied: typing_extensions&gt;=3.10.0.0 in /usr/local/lib/python3.9/dist-packages (from PyPDF2) (4.5.0)
+Requirement already satisfied: PyPDF2 in /usr/local/lib/python3.10/dist-packages (3.0.1)
 </pre></div>
 </div>
 </div>
@@ -541,7 +514,7 @@ Requirement already satisfied: typing_extensions&gt;=3.10.0.0 in /usr/local/lib/
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: docx2txt in /usr/local/lib/python3.9/dist-packages (0.8)
+Requirement already satisfied: docx2txt in /usr/local/lib/python3.10/dist-packages (0.8)
 </pre></div>
 </div>
 </div>
@@ -660,21 +633,21 @@ Requirement already satisfied: docx2txt in /usr/local/lib/python3.9/dist-package
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">StdinNotImplementedError</span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-12-3d2a36d056b4&gt;</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="nn">&lt;ipython-input-11-3d2a36d056b4&gt;</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># reading a file and</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># printing the size of the file</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">document</span> <span class="o">=</span> <span class="n">readDoc</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The length of the file is:&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">document</span><span class="p">))</span>
 
-<span class="nn">&lt;ipython-input-10-f5becff9172e&gt;</span> in <span class="ni">readDoc</span><span class="nt">()</span>
+<span class="nn">&lt;ipython-input-9-f5becff9172e&gt;</span> in <span class="ni">readDoc</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">readDoc</span><span class="p">():</span>
 <span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Please input a file name: &#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You have asked for the document </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="c1"># now read the type of document</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">    </span><span class="mi">846</span>         <span class="s2">&quot;&quot;&quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">847</span><span class="s2">         if not self._allow_stdin:</span>
 <span class="ne">--&gt; </span><span class="mi">848</span><span class="s2">             raise StdinNotImplementedError(</span>
