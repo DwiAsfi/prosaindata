@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crawling Data &#8212; My sample book</title>
+    <title>Crawling Data &#8212; Dwi Asfi Fajrin</title>
   
   
   
@@ -374,6 +374,18 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="crawling-data">
 <h1><strong>Crawling Data</strong><a class="headerlink" href="#crawling-data" title="Permalink to this heading">#</a></h1>
+<blockquote>
+<div><p>Data crawling adalah proses automatis untuk mengumpulkan dan mengindeks data dari berbagai sumber seperti situs web, database, atau dokumen. Proses ini kemudian mengimpor informasi atau data yang telah ditemukan ke dalam file lokal di komputer Anda. Data yang dikumpulkan melalui crawling kemudian dapat diproses dan digunakan untuk berbagai tujuan, seperti analisis data, penelitian, atau pengembangan sistem informasi.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Data scraping atau pengikisan data adalah proses pengambilan data yang available, baik itu di web atau komputer. Proses ini kemudian dapat mengimpor informasi yang telah ditemukan ke dalam file lokal komputer Anda. Data-data yang telah terkumpul terkadang juga dapat disalurkan ke situs web lain. Scraping dilakukan saat data sudah terkumpul melalui proses crawling.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Data scraping hanya mengambil data yang dipilih saat proses pengunduhan, sedangkan proses ini hanya memilah target yang akan dipilih. Proses crawling memungkinkan untuk meminimalisir reduplikasi data, berbeda dengan scraping yang masih rawan akan adanya reduplikasi karena selalu ada konten online yang diduplikasi di beberapa website.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Libary untuk scraping tersedia banyak, namun untuk kasus ini menggunakan library “snscrape” dan “BeautifulSoup”</p>
+</div></blockquote>
 <div class="section" id="twitter">
 <h2>Twitter<a class="headerlink" href="#twitter" title="Permalink to this heading">#</a></h2>
 <p>sncrape</p>
@@ -385,13 +397,8 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting snscrape
-  Downloading snscrape-0.6.2.20230320-py3-none-any.whl (71 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/71.8 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.8/71.8 kB</span> <span class=" -Color -Color-Red">4.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: requests[socks] in /usr/local/lib/python3.10/dist-packages (from snscrape) (2.27.1)
+Requirement already satisfied: snscrape in /usr/local/lib/python3.10/dist-packages (0.6.2.20230320)
+Requirement already satisfied: requests[socks] in /usr/local/lib/python3.10/dist-packages (from snscrape) (2.27.1)
 Requirement already satisfied: lxml in /usr/local/lib/python3.10/dist-packages (from snscrape) (4.9.2)
 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from snscrape) (4.11.2)
 Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from snscrape) (3.12.0)
@@ -401,10 +408,6 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
 Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (2.0.12)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: snscrape
-Successfully installed snscrape-0.6.2.20230320
 </pre></div>
 </div>
 </div>

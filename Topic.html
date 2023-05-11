@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Topic Modelling &#8212; My sample book</title>
+    <title>Topic Modelling &#8212; Dwi Asfi Fajrin</title>
   
   
   
@@ -380,6 +380,12 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="topic-modelling">
 <h1><strong>Topic Modelling</strong><a class="headerlink" href="#topic-modelling" title="Permalink to this heading">#</a></h1>
+<blockquote>
+<div><p>Topic modeling merupakan salah satu pendekatan pada Text Mining yang cukup handal dalam melakukan penemuan data-data teks yang tersembunyi dan menemukan hubungan antara teks yang satu dengan lainnya dari suatu corpus.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Sederhananya yaitu mengelompokkan data teks berdasarkan suatu topik tertentu. Cara kerja topik modelling seperti clustering, dikatakan seperti clustering karena mengelompokkan dokumen berdasarkan kemiripannya. Topic Modelling termasuk unsupervised learning karena data yang digunakan tidak memiliki label.</p>
+</div></blockquote>
 <div class="section" id="mengambil-dataset">
 <h2>Mengambil dataset<a class="headerlink" href="#mengambil-dataset" title="Permalink to this heading">#</a></h2>
 <blockquote>
@@ -677,7 +683,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0f9c32a5-9d0f-4362-9900-990785a9e0db">
+  <div id="df-6f3b89f2-c9b6-43a5-825a-aa71db1f4f7a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1092,7 +1098,7 @@ document.write(`
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0f9c32a5-9d0f-4362-9900-990785a9e0db')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6f3b89f2-c9b6-43a5-825a-aa71db1f4f7a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1143,12 +1149,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0f9c32a5-9d0f-4362-9900-990785a9e0db button.colab-df-convert');
+          document.querySelector('#df-6f3b89f2-c9b6-43a5-825a-aa71db1f4f7a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0f9c32a5-9d0f-4362-9900-990785a9e0db');
+          const element = document.querySelector('#df-6f3b89f2-c9b6-43a5-825a-aa71db1f4f7a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1189,17 +1195,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting Sastrawi
-  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">10.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: Sastrawi
-Successfully installed Sastrawi-1.0.1
+Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packages (1.0.1)
 </pre></div>
 </div>
 </div>
@@ -1222,10 +1218,11 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
-[nltk_data]   Unzipping corpora/stopwords.zip.
+[nltk_data]   Package stopwords is already up-to-date!
 [nltk_data] Downloading package wordnet to /root/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
 [nltk_data] Downloading package punkt to /root/nltk_data...
-[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data]   Package punkt is already up-to-date!
 </pre></div>
 </div>
 </div>
@@ -1239,7 +1236,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b5312c52-e867-4ce6-8b40-c0d8c18c361b">
+  <div id="df-87537ef5-8e16-466f-ad41-b5d802a57fcd">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1647,7 +1644,7 @@ Successfully installed Sastrawi-1.0.1
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-b5312c52-e867-4ce6-8b40-c0d8c18c361b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-87537ef5-8e16-466f-ad41-b5d802a57fcd')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1698,12 +1695,12 @@ Successfully installed Sastrawi-1.0.1
 
       <script>
         const buttonEl =
-          document.querySelector('#df-b5312c52-e867-4ce6-8b40-c0d8c18c361b button.colab-df-convert');
+          document.querySelector('#df-87537ef5-8e16-466f-ad41-b5d802a57fcd button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-b5312c52-e867-4ce6-8b40-c0d8c18c361b');
+          const element = document.querySelector('#df-87537ef5-8e16-466f-ad41-b5d802a57fcd');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1746,7 +1743,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-8e319988-fe1e-4058-b755-6041224224da">
+  <div id="df-167be17a-56c0-4779-8755-14916451b3bb">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1989,7 +1986,7 @@ Successfully installed Sastrawi-1.0.1
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8e319988-fe1e-4058-b755-6041224224da')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-167be17a-56c0-4779-8755-14916451b3bb')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2040,12 +2037,12 @@ Successfully installed Sastrawi-1.0.1
 
       <script>
         const buttonEl =
-          document.querySelector('#df-8e319988-fe1e-4058-b755-6041224224da button.colab-df-convert');
+          document.querySelector('#df-167be17a-56c0-4779-8755-14916451b3bb button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8e319988-fe1e-4058-b755-6041224224da');
+          const element = document.querySelector('#df-167be17a-56c0-4779-8755-14916451b3bb');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2084,7 +2081,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-556ef423-d1f7-4ff0-b6c8-65286bc2d0eb">
+  <div id="df-36a91011-d40a-47eb-9b3f-742731dfe797">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2327,7 +2324,7 @@ Successfully installed Sastrawi-1.0.1
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-556ef423-d1f7-4ff0-b6c8-65286bc2d0eb')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-36a91011-d40a-47eb-9b3f-742731dfe797')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2378,12 +2375,12 @@ Successfully installed Sastrawi-1.0.1
 
       <script>
         const buttonEl =
-          document.querySelector('#df-556ef423-d1f7-4ff0-b6c8-65286bc2d0eb button.colab-df-convert');
+          document.querySelector('#df-36a91011-d40a-47eb-9b3f-742731dfe797 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-556ef423-d1f7-4ff0-b6c8-65286bc2d0eb');
+          const element = document.querySelector('#df-36a91011-d40a-47eb-9b3f-742731dfe797');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2434,19 +2431,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting indoNLP
-  Downloading indoNLP-0.3.4-py3-none-any.whl (121 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/121.9 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">121.9/121.9 kB</span> <span class=" -Color -Color-Red">7.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: indoNLP
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed indoNLP-0.3.4
+Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-packages (0.3.4)
 </pre></div>
 </div>
 </div>
@@ -2483,7 +2468,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-85ce3623-25c4-4264-a8fd-22772d272629">
+  <div id="df-977839b4-06c3-4a60-9a36-266f02f930a1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2726,7 +2711,7 @@ Successfully installed Sastrawi-1.0.1
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-85ce3623-25c4-4264-a8fd-22772d272629')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-977839b4-06c3-4a60-9a36-266f02f930a1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2777,12 +2762,12 @@ Successfully installed Sastrawi-1.0.1
 
       <script>
         const buttonEl =
-          document.querySelector('#df-85ce3623-25c4-4264-a8fd-22772d272629 button.colab-df-convert');
+          document.querySelector('#df-977839b4-06c3-4a60-9a36-266f02f930a1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-85ce3623-25c4-4264-a8fd-22772d272629');
+          const element = document.querySelector('#df-977839b4-06c3-4a60-9a36-266f02f930a1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2973,10 +2958,10 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;menangx&#39;, &#39;anda&#39;, &#39;prabowo&#39;, &#39;pasang&#39;, &#39;anis&#39;, &#39;kalah&#39;, &#39;cawapres&#39;, &#39;kali&#39;, &#39;capres&#39;, &#39;peluangx&#39;]
+[&#39;ya&#39;, &#39;usaha&#39;, &#39;pasang&#39;, &#39;capres&#39;, &#39;menang&#39;, &#39;ganjar&#39;, &#39;pasang&#39;, &#39;anis&#39;, &#39;ganjar&#39;, &#39;menang&#39;, &#39;anis&#39;, &#39;calon&#39;, &#39;peluang&#39;, &#39;tipis&#39;, &#39;lalu&#39;, &#39;anis&#39;, &#39;maju&#39;, &#39;pecah&#39;, &#39;suara&#39;]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ya&#39;, &#39;usaha&#39;, &#39;pasang&#39;, &#39;capres&#39;, &#39;menang&#39;, &#39;ganjar&#39;, &#39;pasang&#39;, &#39;anis&#39;, &#39;ganjar&#39;, &#39;menang&#39;, &#39;anis&#39;, &#39;calon&#39;, &#39;peluang&#39;, &#39;tipis&#39;, &#39;lalu&#39;, &#39;anis&#39;, &#39;maju&#39;, &#39;pecah&#39;, &#39;suara&#39;]
-[&#39;mahfud&#39;, &#39;md&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;mahfud&#39;, &#39;md&#39;]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;anies&#39;, &#39;erick&#39;, &#39;sempurna&#39;]
@@ -2998,15 +2983,11 @@ Successfully installed Sastrawi-1.0.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;tuju&#39;, &#39;capres&#39;, &#39;cawapres&#39;, &#39;pilih&#39;, &#39;rakyat&#39;, &#39;biar&#39;, &#39;berjln&#39;, &#39;milu&#39;, &#39;jujur&#39;, &#39;adil&#39;, &#39;ayo&#39;, &#39;golkar&#39;, &#39;gerindra&#39;, &#39;buru&#39;, &#39;tentu&#39;, &#39;sikap&#39;, &#39;biar&#39;, &#39;rakyat&#39;, &#39;tentu&#39;, &#39;pilih&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ya&#39;, &#39;poros&#39;, &#39;apa&#39;, &#39;prabowo&#39;, &#39;setia&#39;, &#39;bendera&#39;, &#39;merah&#39;, &#39;putih&#39;]
+[&#39;ya&#39;, &#39;poros&#39;, &#39;apa&#39;, &#39;prabowo&#39;, &#39;setia&#39;, &#39;bendera&#39;, &#39;merah&#39;, &#39;putih&#39;]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ujung&#39;, &#39;ujung&#39;, &#39;poross&#39;, &#39;maksimal&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;maju&#39;, &#39;pilpres&#39;, &#39;poros&#39;, &#39;logistik&#39;, &#39;pilpres&#39;, &#39;bro&#39;]
+[&#39;maju&#39;, &#39;pilpres&#39;, &#39;poros&#39;, &#39;logistik&#39;, &#39;pilpres&#39;, &#39;bro&#39;]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;anis&#39;, &#39;rk&#39;, &#39;nasdem&#39;, &#39;pks&#39;, &#39;demokrat&#39;]
@@ -3042,7 +3023,9 @@ Successfully installed Sastrawi-1.0.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;poros&#39;, &#39;poros&#39;, &#39;menang&#39;, &#39;anda&#39;, &#39;tum&#39;, &#39;partai&#39;, &#39;calon&#39;, &#39;ahok&#39;, &#39;sgb&#39;, &#39;capres&#39;, &#39;ahok&#39;, &#39;sosok&#39;, &#39;kenal&#39;, &#39;luas&#39;, &#39;integritas&#39;, &#39;popularitas&#39;, &#39;indonesia&#39;, &#39;internasional&#39;, &#39;beda&#39;, &#39;nasional&#39;, &#39;regional&#39;, &#39;mudah&#39;, &#39;murah&#39;, &#39;menang&#39;, &#39;maju&#39;, &#39;nkri&#39;, &#39;naik&#39;, &#39;elektabilitas&#39;, &#39;partai&#39;, &#39;ahok&#39;, &#39;restu&#39;, &#39;mendiang&#39;, &#39;gus&#39;, &#39;dur&#39;, &#39;dukung&#39;, &#39;penuh&#39;, &#39;nu&#39;, &#39;ormas&#39;, &#39;besar&#39;, &#39;dunia&#39;, &#39;heran&#39;, &#39;partai&#39;, &#39;berani&#39;, &#39;calon&#39;, &#39;usung&#39;, &#39;ahok&#39;, &#39;reformasi&#39;, &#39;total&#39;, &#39;ahok&#39;, &#39;dicapreskan&#39;, &#39;partai&#39;, &#39;hak&#39;, &#39;mencapreskannya&#39;, &#39;penting&#39;, &#39;nasional&#39;, &#39;biar&#39;, &#39;presiden&#39;, &#39;republik&#39;, &#39;indonesia&#39;, &#39;jadi&#39;, &#39;tugas&#39;, &#39;partai&#39;, &#39;sakit&#39;, &#39;hati&#39;, &#39;rakyat&#39;, &#39;rendah&#39;, &#39;martabat&#39;, &#39;bangsa&#39;, &#39;indonesia&#39;, &#39;presiden&#39;, &#39;pilih&#39;, &#39;langsung&#39;, &#39;rakyat&#39;, &#39;tanggung&#39;, &#39;langsung&#39;, &#39;rakyat&#39;, &#39;tum&#39;, &#39;partai&#39;, &#39;partai&#39;, &#39;rakyat&#39;, &#39;kembaikan&#39;, &#39;daulat&#39;, &#39;rakyat&#39;, &#39;anies&#39;, &#39;ahy&#39;, &#39;vs&#39;, &#39;prabowo&#39;, &#39;muhaimin&#39;, &#39;vs&#39;, &#39;ganjar&#39;, &#39;erik&#39;, &#39;vs&#39;, &#39;ahok&#39;, &#39;mahfud&#39;, &#39;pilih&#39;, &#39;kualitas&#39;, &#39;indonesia&#39;, &#39;presiden&#39;, &#39;kualitas&#39;]
-[&#39;prasetyo&#39;, &#39;insani&#39;, &#39;agama&#39;, &#39;penting&#39;, &#39;politik&#39;, &#39;agama&#39;, &#39;kubu&#39;, &#39;penting&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;prasetyo&#39;, &#39;insani&#39;, &#39;agama&#39;, &#39;penting&#39;, &#39;politik&#39;, &#39;agama&#39;, &#39;kubu&#39;, &#39;penting&#39;]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ahoknya&#39;, &#39;ogah&#39;]
@@ -3075,9 +3058,7 @@ Successfully installed Sastrawi-1.0.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;tuju&#39;, &#39;ayo&#39;, &#39;bikin&#39;, &#39;poros&#39;, &#39;ridwan&#39;, &#39;kamil&#39;, &#39;eric&#39;, &#39;thohir&#39;, &#39;the&#39;, &#39;black&#39;, &#39;horse&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;bond&#39;, &#39;biar&#39;, &#39;seru&#39;, &#39;kalo&#39;, &#39;poros&#39;]
+[&#39;bond&#39;, &#39;biar&#39;, &#39;seru&#39;, &#39;kalo&#39;, &#39;poros&#39;]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;usung&#39;, &#39;erik&#39;, &#39;pasang&#39;, &#39;prabowo&#39;, &#39;golkar&#39;, &#39;koalisi&#39;, &#39;pkb&#39;, &#39;usung&#39;, &#39;aerlangga&#39;, &#39;cak&#39;, &#39;imin&#39;, &#39;menang&#39;, &#39;pilpres&#39;, &#39;menjg&#39;, &#39;marwah&#39;, &#39;partai&#39;, &#39;mendptkan&#39;, &#39;kotail&#39;, &#39;efek&#39;, &#39;terjd&#39;, &#39;poros&#39;, &#39;romahurmuzy&#39;, &#39;podcast&#39;, &#39;akbar&#39;, &#39;faizal&#39;, &#39;kalo&#39;, &#39;melht&#39;, &#39;dinamika&#39;, &#39;masuk&#39;, &#39;akal&#39;, &#39;kecuali&#39;, &#39;demokrat&#39;, &#39;copet&#39;, &#39;muldoko&#39;]
@@ -3101,71 +3082,11 @@ Successfully installed Sastrawi-1.0.1
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;capres&#39;, &#39;cawapres&#39;, &#39;lingkar&#39;, &#39;jkw&#39;, &#39;gub&#39;, &#39;palestina&#39;, &#39;wowo&#39;, &#39;airlangga&#39;, &#39;erik&#39;, &#39;sandi&#39;, &#39;mpud&#39;, &#39;gue&#39;, &#39;pilih&#39;]
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-16-63f9ef697a47&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>   <span class="n">katastem</span><span class="o">=</span><span class="p">[]</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>   <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="n">stopword</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
-<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="n">katastem</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>   <span class="n">stemming</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">katastem</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>   <span class="nb">print</span><span class="p">(</span><span class="n">katastem</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/CachedStemmer.py</span> in <span class="ni">stem</span><span class="nt">(self, text)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>                 <span class="n">stems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>             <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">20</span>                 <span class="n">stem</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delegatedStemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">stem</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>                 <span class="n">stems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stem</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Stemmer.py</span> in <span class="ni">stem</span><span class="nt">(self, text)</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> 
-<span class="g g-Whitespace">     </span><span class="mi">26</span>         <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">27</span>             <span class="n">stems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stem_word</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span> 
-<span class="g g-Whitespace">     </span><span class="mi">29</span>         <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">stems</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Stemmer.py</span> in <span class="ni">stem_word</span><span class="nt">(self, word)</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stem_plural_word</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span>         <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">36</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stem_singular_word</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">37</span> 
-<span class="g g-Whitespace">     </span><span class="mi">38</span>     <span class="k">def</span> <span class="nf">is_plural</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Stemmer.py</span> in <span class="ni">stem_singular_word</span><span class="nt">(self, word)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;Stem a singular word to its common stem form.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span>         <span class="n">context</span> <span class="o">=</span> <span class="n">Context</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">visitor_provider</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">84</span>         <span class="n">context</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span> 
-<span class="g g-Whitespace">     </span><span class="mi">86</span>         <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="n">result</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">execute</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span> 
-<span class="g g-Whitespace">     </span><span class="mi">36</span>         <span class="c1">#step 1 - 5</span>
-<span class="ne">---&gt; </span><span class="mi">37</span>         <span class="bp">self</span><span class="o">.</span><span class="n">start_stemming_process</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span> 
-<span class="g g-Whitespace">     </span><span class="mi">39</span>         <span class="c1">#step 6</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">start_stemming_process</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">78</span> 
-<span class="g g-Whitespace">     </span><span class="mi">79</span>         <span class="c1">#step 4, 5</span>
-<span class="ne">---&gt; </span><span class="mi">80</span>         <span class="bp">self</span><span class="o">.</span><span class="n">remove_prefixes</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">81</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span>             <span class="k">return</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">remove_prefixes</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">87</span>     <span class="k">def</span> <span class="nf">remove_prefixes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">89</span>             <span class="bp">self</span><span class="o">.</span><span class="n">accept_prefix_visitors</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prefix_pisitors</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">90</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">91</span>                 <span class="k">return</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">accept_prefix_visitors</span><span class="nt">(self, visitors)</span>
-<span class="g g-Whitespace">    </span><span class="mi">109</span>         <span class="k">for</span> <span class="n">visitor</span> <span class="ow">in</span> <span class="n">visitors</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">110</span>             <span class="bp">self</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">visitor</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">111</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">112</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_word</span>
-<span class="g g-Whitespace">    </span><span class="mi">113</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_is_stopped</span><span class="p">:</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ngaruh&#39;, &#39;opi&#39;, &#39;untunge&#39;, &#39;awak&#39;, &#39;entar&#39;, &#39;tukang&#39;, &#39;ngathong&#39;, &#39;belaka&#39;]
+[&#39;lu&#39;, &#39;mati&#39;, &#39;ngaruh&#39;, &#39;lu&#39;, &#39;kaca&#39;, &#39;lu&#39;, &#39;ya&#39;, &#39;muka&#39;, &#39;jelek&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;iya&#39;, &#39;orang&#39;, &#39;buzzer&#39;, &#39;anis&#39;]
 </pre></div>
 </div>
 </div>
@@ -3184,7 +3105,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-be7fb09a-932a-4ea1-8471-6351e8185a18">
+  <div id="df-b0fd39cf-80c3-4c28-b8ae-f362383ce515">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3427,7 +3348,7 @@ Successfully installed Sastrawi-1.0.1
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-be7fb09a-932a-4ea1-8471-6351e8185a18')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b0fd39cf-80c3-4c28-b8ae-f362383ce515')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -3478,12 +3399,12 @@ Successfully installed Sastrawi-1.0.1
 
       <script>
         const buttonEl =
-          document.querySelector('#df-be7fb09a-932a-4ea1-8471-6351e8185a18 button.colab-df-convert');
+          document.querySelector('#df-b0fd39cf-80c3-4c28-b8ae-f362383ce515 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-be7fb09a-932a-4ea1-8471-6351e8185a18');
+          const element = document.querySelector('#df-b0fd39cf-80c3-4c28-b8ae-f362383ce515');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3601,7 +3522,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-623320b0-5c78-4c17-8d0d-cad7fea82f69">
+  <div id="df-15f8bb3c-2659-401b-ae4d-7bcf25e7bfbd">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -4945,7 +4866,7 @@ Successfully installed Sastrawi-1.0.1
 </table>
 <p>54 rows × 361 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-623320b0-5c78-4c17-8d0d-cad7fea82f69')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-15f8bb3c-2659-401b-ae4d-7bcf25e7bfbd')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -4996,12 +4917,12 @@ Successfully installed Sastrawi-1.0.1
 
       <script>
         const buttonEl =
-          document.querySelector('#df-623320b0-5c78-4c17-8d0d-cad7fea82f69 button.colab-df-convert');
+          document.querySelector('#df-15f8bb3c-2659-401b-ae4d-7bcf25e7bfbd button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-623320b0-5c78-4c17-8d0d-cad7fea82f69');
+          const element = document.querySelector('#df-15f8bb3c-2659-401b-ae4d-7bcf25e7bfbd');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -5114,7 +5035,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-972c7185-0aa0-4e62-908e-a9f4117096df">
+  <div id="df-c392f2b2-cce2-4582-beae-38ea2626f44c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -5467,7 +5388,7 @@ Successfully installed Sastrawi-1.0.1
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-972c7185-0aa0-4e62-908e-a9f4117096df')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c392f2b2-cce2-4582-beae-38ea2626f44c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -5518,12 +5439,12 @@ Successfully installed Sastrawi-1.0.1
 
       <script>
         const buttonEl =
-          document.querySelector('#df-972c7185-0aa0-4e62-908e-a9f4117096df button.colab-df-convert');
+          document.querySelector('#df-c392f2b2-cce2-4582-beae-38ea2626f44c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-972c7185-0aa0-4e62-908e-a9f4117096df');
+          const element = document.querySelector('#df-c392f2b2-cce2-4582-beae-38ea2626f44c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -5578,7 +5499,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-447b3788-c6f3-4e79-8f37-a2babbaea931">
+  <div id="df-d9f40092-48d3-4ecc-8dfe-94292774120d">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -5698,7 +5619,7 @@ Successfully installed Sastrawi-1.0.1
 </table>
 <p>3 rows × 361 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-447b3788-c6f3-4e79-8f37-a2babbaea931')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d9f40092-48d3-4ecc-8dfe-94292774120d')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -5749,12 +5670,12 @@ Successfully installed Sastrawi-1.0.1
 
       <script>
         const buttonEl =
-          document.querySelector('#df-447b3788-c6f3-4e79-8f37-a2babbaea931 button.colab-df-convert');
+          document.querySelector('#df-d9f40092-48d3-4ecc-8dfe-94292774120d button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-447b3788-c6f3-4e79-8f37-a2babbaea931');
+          const element = document.querySelector('#df-d9f40092-48d3-4ecc-8dfe-94292774120d');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
