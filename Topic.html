@@ -1331,7 +1331,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df.to_csv(&quot;capres2024.csv&quot;,index=False)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;capres2024.csv&quot;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -5574,9 +5574,22 @@ Successfully installed indoNLP-0.3.4
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">SV</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>361
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#bobot setiap kata terhadap topik</span>
 <span class="n">label</span><span class="o">=</span><span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">362</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
   <span class="n">masukan</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;kata ke-</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span>
   <span class="n">label</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">masukan</span><span class="p">)</span>
 <span class="n">topik</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">SV</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
@@ -5586,7 +5599,7 @@ Successfully installed indoNLP-0.3.4
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-87f82584-29c5-46b4-a240-332e37d63a52">
+  <div id="df-9066d82c-eadb-4bbc-bcdf-84cd9ed31069">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -5706,7 +5719,7 @@ Successfully installed indoNLP-0.3.4
 </table>
 <p>3 rows × 361 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-87f82584-29c5-46b4-a240-332e37d63a52')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9066d82c-eadb-4bbc-bcdf-84cd9ed31069')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -5757,12 +5770,12 @@ Successfully installed indoNLP-0.3.4
 
       <script>
         const buttonEl =
-          document.querySelector('#df-87f82584-29c5-46b4-a240-332e37d63a52 button.colab-df-convert');
+          document.querySelector('#df-9066d82c-eadb-4bbc-bcdf-84cd9ed31069 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-87f82584-29c5-46b4-a240-332e37d63a52');
+          const element = document.querySelector('#df-9066d82c-eadb-4bbc-bcdf-84cd9ed31069');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
