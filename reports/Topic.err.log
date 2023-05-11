@@ -30,14 +30,7 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-stemming=[]
-for i in range(len(stopword)):
-  factory = StemmerFactory()
-  stemmer = factory.create_stemmer()
-  katastem=[]
-  for x in (stopword[i]):
-    katastem.append(stemmer.stem(x))
-  stemming.append(katastem)
-  print(katastem)
+from google.colab import drive
+drive.mount('/content/drive')
 -------------------
 

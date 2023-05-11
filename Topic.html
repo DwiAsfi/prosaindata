@@ -425,6 +425,129 @@ document.write(`
 </div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pwd
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/prosain/tugas
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-2-d5df0069828e&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="k">def</span> <span class="nf">mount</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">,</span> <span class="n">force_remount</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout_ms</span><span class="o">=</span><span class="mi">120000</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span><span class="w">   </span><span class="sd">&quot;&quot;&quot;Mount your Google Drive at the specified mountpoint path.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">103</span>   <span class="k">return</span> <span class="n">_mount</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>       <span class="n">mountpoint</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span>   <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">132</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span>     <span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">175</span>   <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">176</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">94</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">96</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>     <span class="k">if</span> <span class="p">(</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/drive/MyDrive
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>mkdir<span class="w"> </span>prosaindata
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: cannot create directory ‘prosaindata’: File exists
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> prosaindata
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/prosaindata
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>mkdir<span class="w"> </span>tugas
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: cannot create directory ‘tugas’: File exists
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> tugas
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/prosaindata/tugas
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>mkdir<span class="w"> </span>tugas_PSD
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">googleapiclient.discovery</span> <span class="kn">import</span> <span class="n">build</span>
 </pre></div>
@@ -714,7 +837,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-55e67c57-facf-4185-bdcf-b15a135e0e0c">
+  <div id="df-846effdc-c82d-4dad-9a56-9a76274f1367">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1129,7 +1252,7 @@ document.write(`
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-55e67c57-facf-4185-bdcf-b15a135e0e0c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-846effdc-c82d-4dad-9a56-9a76274f1367')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1180,12 +1303,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-55e67c57-facf-4185-bdcf-b15a135e0e0c button.colab-df-convert');
+          document.querySelector('#df-846effdc-c82d-4dad-9a56-9a76274f1367 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-55e67c57-facf-4185-bdcf-b15a135e0e0c');
+          const element = document.querySelector('#df-846effdc-c82d-4dad-9a56-9a76274f1367');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1226,7 +1349,11 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packages (1.0.1)
+Collecting Sastrawi
+  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">9.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: Sastrawi
+Successfully installed Sastrawi-1.0.1
 </pre></div>
 </div>
 </div>
@@ -1249,11 +1376,10 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
-[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data]   Unzipping corpora/stopwords.zip.
 [nltk_data] Downloading package wordnet to /root/nltk_data...
-[nltk_data]   Package wordnet is already up-to-date!
 [nltk_data] Downloading package punkt to /root/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
+[nltk_data]   Unzipping tokenizers/punkt.zip.
 </pre></div>
 </div>
 </div>
@@ -1267,7 +1393,7 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4dea4a6f-7cce-4e28-96a4-20072d6b2013">
+  <div id="df-c067c834-8f79-48ff-bacf-ec6da27a5482">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1675,7 +1801,7 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4dea4a6f-7cce-4e28-96a4-20072d6b2013')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c067c834-8f79-48ff-bacf-ec6da27a5482')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1726,12 +1852,12 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4dea4a6f-7cce-4e28-96a4-20072d6b2013 button.colab-df-convert');
+          document.querySelector('#df-c067c834-8f79-48ff-bacf-ec6da27a5482 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4dea4a6f-7cce-4e28-96a4-20072d6b2013');
+          const element = document.querySelector('#df-c067c834-8f79-48ff-bacf-ec6da27a5482');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1774,7 +1900,7 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-21a984d0-94f2-4dec-bb22-a126acdacc5a">
+  <div id="df-79c05c8a-2a40-4b9b-9bf9-8aaa1ff5642e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2017,7 +2143,7 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-21a984d0-94f2-4dec-bb22-a126acdacc5a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-79c05c8a-2a40-4b9b-9bf9-8aaa1ff5642e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2068,12 +2194,12 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 
       <script>
         const buttonEl =
-          document.querySelector('#df-21a984d0-94f2-4dec-bb22-a126acdacc5a button.colab-df-convert');
+          document.querySelector('#df-79c05c8a-2a40-4b9b-9bf9-8aaa1ff5642e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-21a984d0-94f2-4dec-bb22-a126acdacc5a');
+          const element = document.querySelector('#df-79c05c8a-2a40-4b9b-9bf9-8aaa1ff5642e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2112,7 +2238,7 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-91903f24-97f1-4570-9b6d-4ded41dec558">
+  <div id="df-7e064eeb-c650-4014-840e-ef8044777c6a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2355,7 +2481,7 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-91903f24-97f1-4570-9b6d-4ded41dec558')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7e064eeb-c650-4014-840e-ef8044777c6a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2406,12 +2532,12 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 
       <script>
         const buttonEl =
-          document.querySelector('#df-91903f24-97f1-4570-9b6d-4ded41dec558 button.colab-df-convert');
+          document.querySelector('#df-7e064eeb-c650-4014-840e-ef8044777c6a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-91903f24-97f1-4570-9b6d-4ded41dec558');
+          const element = document.querySelector('#df-7e064eeb-c650-4014-840e-ef8044777c6a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2462,7 +2588,11 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-packages (0.3.4)
+Collecting indoNLP
+  Downloading indoNLP-0.3.4-py3-none-any.whl (121 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">121.9/121.9 kB</span> <span class=" -Color -Color-Red">6.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: indoNLP
+Successfully installed indoNLP-0.3.4
 </pre></div>
 </div>
 </div>
@@ -2499,7 +2629,7 @@ Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-package
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e479b320-75cb-4f3f-99ac-e3b6b64b31a9">
+  <div id="df-f230d4c0-1edf-449a-aa76-414b633fd2af">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2742,7 +2872,7 @@ Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-package
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e479b320-75cb-4f3f-99ac-e3b6b64b31a9')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f230d4c0-1edf-449a-aa76-414b633fd2af')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2793,12 +2923,12 @@ Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-package
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e479b320-75cb-4f3f-99ac-e3b6b64b31a9 button.colab-df-convert');
+          document.querySelector('#df-f230d4c0-1edf-449a-aa76-414b633fd2af button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e479b320-75cb-4f3f-99ac-e3b6b64b31a9');
+          const element = document.querySelector('#df-f230d4c0-1edf-449a-aa76-414b633fd2af');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2990,191 +3120,58 @@ Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-package
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;menangx&#39;, &#39;anda&#39;, &#39;prabowo&#39;, &#39;pasang&#39;, &#39;anis&#39;, &#39;kalah&#39;, &#39;cawapres&#39;, &#39;kali&#39;, &#39;capres&#39;, &#39;peluangx&#39;]
 [&#39;ya&#39;, &#39;usaha&#39;, &#39;pasang&#39;, &#39;capres&#39;, &#39;menang&#39;, &#39;ganjar&#39;, &#39;pasang&#39;, &#39;anis&#39;, &#39;ganjar&#39;, &#39;menang&#39;, &#39;anis&#39;, &#39;calon&#39;, &#39;peluang&#39;, &#39;tipis&#39;, &#39;lalu&#39;, &#39;anis&#39;, &#39;maju&#39;, &#39;pecah&#39;, &#39;suara&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;mahfud&#39;, &#39;md&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;anies&#39;, &#39;erick&#39;, &#39;sempurna&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;media&#39;, &#39;amat&#39;, &#39;bodoh&#39;, &#39;bohong&#39;, &#39;dagel&#39;, &#39;politik&#39;, &#39;kuasa&#39;, &#39;kroni&#39;, &#39;kroni&#39;, &#39;nya&#39;, &#39;hancur&#39;, &#39;sistim&#39;, &#39;demokrasi&#39;, &#39;indonesia&#39;, &#39;akibat&#39;, &#39;ambisi&#39;, &#39;serakah&#39;, &#39;rakyat&#39;, &#39;indonesia&#39;, &#39;bodoh&#39;, &#39;bohong&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;masuk&#39;, &#39;nkri&#39;, &#39;sabang&#39;, &#39;meraoke&#39;, &#39;cawapres&#39;, &#39;indonesia&#39;, &#39;timur&#39;, &#39;imbang&#39;, &#39;fikir&#39;, &#39;dampak&#39;, &#39;depan&#39;, &#39;nkri&#39;, &#39;cinta&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;moga&#39;, &#39;presiden&#39;, &#39;sedekah&#39;, &#39;harta&#39;, &#39;masyarakat&#39;, &#39;butuh&#39;, &#39;umar&#39;, &#39;bin&#39;, &#39;khatab&#39;, &#39;gelimang&#39;, &#39;harta&#39;, &#39;rakyat&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;mahfud&#39;, &#39;ahok&#39;, &#39;indpenden&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;tgb&#39;, &#39;surve&#39;, &#39;percaya&#39;, &#39;memg&#39;, &#39;nyata&#39;, &#39;safari&#39;, &#39;aji&#39;, &#39;kmna&#39;, &#39;rekam&#39;, &#39;jejak&#39;, &#39;prestasi&#39;, &#39;back&#39;, &#39;round&#39;, &#39;tokoh&#39;, &#39;agama&#39;, &#39;dunia&#39;, &#39;damai&#39;, &#39;agama&#39;, &#39;dunia&#39;, &#39;anggota&#39;, &#39;majlis&#39;, &#39;hukama&#39;, &#39;nyata&#39;, &#39;prestasi&#39;, &#39;religius&#39;, &#39;jmaah&#39;, &#39;aji&#39;, &#39;ikut&#39;, &#39;ketua&#39;, &#39;ormas&#39;, &#39;ketua&#39;, &#39;alumni&#39;, &#39;mesir&#39;, &#39;beliau&#39;, &#39;surve&#39;, &#39;hasilx&#39;, &#39;wajar&#39;, &#39;sesuai&#39;, &#39;fakta&#39;, &#39;kenytaan&#39;, &#39;hari&#39;, &#39;dlakukan&#39;, &#39;hasil&#39;, &#39;surve&#39;, &#39;tokohx&#39;, &#39;surve&#39;, &#39;memg&#39;, &#39;biyar&#39;, &#39;nama&#39;, &#39;jual&#39;, &#39;nma&#39;, &#39;rakyat&#39;, &#39;tau&#39;, &#39;lihat&#39;, &#39;dengar&#39;, &#39;cocok&#39;, &#39;berani&#39;, &#39;bayar&#39;, &#39;masuk&#39;, &#39;coba&#39;, &#39;tgb&#39;, &#39;bayar&#39;, &#39;surve&#39;, &#39;tayang&#39;, &#39;prestasi&#39;, &#39;rekam&#39;, &#39;jejakx&#39;, &#39;promosi&#39;, &#39;hasilx&#39;, &#39;kandidat&#39;, &#39;religius&#39;, &#39;mengatasix&#39;, &#39;pidato&#39;, &#39;beliau&#39;, &#39;nasihat&#39;, &#39;ilmu&#39;, &#39;renung&#39;, &#39;beliau&#39;, &#39;isi&#39;, &#39;pidatox&#39;, &#39;ceramah&#39;, &#39;bangsa&#39;, &#39;nasionalx&#39;, &#39;religix&#39;, &#39;kayak&#39;, &#39;rakyat&#39;, &#39;jabat&#39;, &#39;kabinetx&#39;, &#39;siram&#39;, &#39;dgan&#39;, &#39;ilmu&#39;, &#39;ceramah&#39;, &#39;nasihat&#39;, &#39;dalil&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;tuju&#39;, &#39;capres&#39;, &#39;cawapres&#39;, &#39;pilih&#39;, &#39;rakyat&#39;, &#39;biar&#39;, &#39;berjln&#39;, &#39;milu&#39;, &#39;jujur&#39;, &#39;adil&#39;, &#39;ayo&#39;, &#39;golkar&#39;, &#39;gerindra&#39;, &#39;buru&#39;, &#39;tentu&#39;, &#39;sikap&#39;, &#39;biar&#39;, &#39;rakyat&#39;, &#39;tentu&#39;, &#39;pilih&#39;]
+[&#39;mahfud&#39;, &#39;md&#39;]
+[&#39;anies&#39;, &#39;erick&#39;, &#39;sempurna&#39;]
+[&#39;media&#39;, &#39;amat&#39;, &#39;bodoh&#39;, &#39;bohong&#39;, &#39;dagel&#39;, &#39;politik&#39;, &#39;kuasa&#39;, &#39;kroni&#39;, &#39;kroni&#39;, &#39;nya&#39;, &#39;hancur&#39;, &#39;sistim&#39;, &#39;demokrasi&#39;, &#39;indonesia&#39;, &#39;akibat&#39;, &#39;ambisi&#39;, &#39;serakah&#39;, &#39;rakyat&#39;, &#39;indonesia&#39;, &#39;bodoh&#39;, &#39;bohong&#39;]
+[&#39;masuk&#39;, &#39;nkri&#39;, &#39;sabang&#39;, &#39;meraoke&#39;, &#39;cawapres&#39;, &#39;indonesia&#39;, &#39;timur&#39;, &#39;imbang&#39;, &#39;fikir&#39;, &#39;dampak&#39;, &#39;depan&#39;, &#39;nkri&#39;, &#39;cinta&#39;]
+[&#39;moga&#39;, &#39;presiden&#39;, &#39;sedekah&#39;, &#39;harta&#39;, &#39;masyarakat&#39;, &#39;butuh&#39;, &#39;umar&#39;, &#39;bin&#39;, &#39;khatab&#39;, &#39;gelimang&#39;, &#39;harta&#39;, &#39;rakyat&#39;]
+[&#39;mahfud&#39;, &#39;ahok&#39;, &#39;indpenden&#39;]
+[&#39;tgb&#39;, &#39;surve&#39;, &#39;percaya&#39;, &#39;memg&#39;, &#39;nyata&#39;, &#39;safari&#39;, &#39;aji&#39;, &#39;kmna&#39;, &#39;rekam&#39;, &#39;jejak&#39;, &#39;prestasi&#39;, &#39;back&#39;, &#39;round&#39;, &#39;tokoh&#39;, &#39;agama&#39;, &#39;dunia&#39;, &#39;damai&#39;, &#39;agama&#39;, &#39;dunia&#39;, &#39;anggota&#39;, &#39;majlis&#39;, &#39;hukama&#39;, &#39;nyata&#39;, &#39;prestasi&#39;, &#39;religius&#39;, &#39;jmaah&#39;, &#39;aji&#39;, &#39;ikut&#39;, &#39;ketua&#39;, &#39;ormas&#39;, &#39;ketua&#39;, &#39;alumni&#39;, &#39;mesir&#39;, &#39;beliau&#39;, &#39;surve&#39;, &#39;hasilx&#39;, &#39;wajar&#39;, &#39;sesuai&#39;, &#39;fakta&#39;, &#39;kenytaan&#39;, &#39;hari&#39;, &#39;dlakukan&#39;, &#39;hasil&#39;, &#39;surve&#39;, &#39;tokohx&#39;, &#39;surve&#39;, &#39;memg&#39;, &#39;biyar&#39;, &#39;nama&#39;, &#39;jual&#39;, &#39;nma&#39;, &#39;rakyat&#39;, &#39;tau&#39;, &#39;lihat&#39;, &#39;dengar&#39;, &#39;cocok&#39;, &#39;berani&#39;, &#39;bayar&#39;, &#39;masuk&#39;, &#39;coba&#39;, &#39;tgb&#39;, &#39;bayar&#39;, &#39;surve&#39;, &#39;tayang&#39;, &#39;prestasi&#39;, &#39;rekam&#39;, &#39;jejakx&#39;, &#39;promosi&#39;, &#39;hasilx&#39;, &#39;kandidat&#39;, &#39;religius&#39;, &#39;mengatasix&#39;, &#39;pidato&#39;, &#39;beliau&#39;, &#39;nasihat&#39;, &#39;ilmu&#39;, &#39;renung&#39;, &#39;beliau&#39;, &#39;isi&#39;, &#39;pidatox&#39;, &#39;ceramah&#39;, &#39;bangsa&#39;, &#39;nasionalx&#39;, &#39;religix&#39;, &#39;kayak&#39;, &#39;rakyat&#39;, &#39;jabat&#39;, &#39;kabinetx&#39;, &#39;siram&#39;, &#39;dgan&#39;, &#39;ilmu&#39;, &#39;ceramah&#39;, &#39;nasihat&#39;, &#39;dalil&#39;]
+[&#39;tuju&#39;, &#39;capres&#39;, &#39;cawapres&#39;, &#39;pilih&#39;, &#39;rakyat&#39;, &#39;biar&#39;, &#39;berjln&#39;, &#39;milu&#39;, &#39;jujur&#39;, &#39;adil&#39;, &#39;ayo&#39;, &#39;golkar&#39;, &#39;gerindra&#39;, &#39;buru&#39;, &#39;tentu&#39;, &#39;sikap&#39;, &#39;biar&#39;, &#39;rakyat&#39;, &#39;tentu&#39;, &#39;pilih&#39;]
 [&#39;ya&#39;, &#39;poros&#39;, &#39;apa&#39;, &#39;prabowo&#39;, &#39;setia&#39;, &#39;bendera&#39;, &#39;merah&#39;, &#39;putih&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ujung&#39;, &#39;ujung&#39;, &#39;poross&#39;, &#39;maksimal&#39;]
+[&#39;ujung&#39;, &#39;ujung&#39;, &#39;poross&#39;, &#39;maksimal&#39;]
 [&#39;maju&#39;, &#39;pilpres&#39;, &#39;poros&#39;, &#39;logistik&#39;, &#39;pilpres&#39;, &#39;bro&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;anis&#39;, &#39;rk&#39;, &#39;nasdem&#39;, &#39;pks&#39;, &#39;demokrat&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;anies&#39;, &#39;rasyid&#39;, &#39;baswedan&#39;, &#39;agus&#39;, &#39;harimurti&#39;, &#39;yudhoyono&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;senang&#39;, &#39;yohanes&#39;, &#39;gagal&#39;, &#39;nyapres&#39;, &#39;pilpres&#39;, &#39;aman&#39;, &#39;damai&#39;, &#39;demo&#39;, &#39;ber&#39;, &#39;jilid&#39;, &#39;takbeer&#39;, &#39;persekusi&#39;, &#39;terror&#39;, &#39;masyarakat&#39;, &#39;pilkada&#39;, &#39;dki&#39;, &#39;pilpres&#39;, &#39;aman&#39;, &#39;damai&#39;, &#39;capres&#39;, &#39;yohanes&#39;]
+[&#39;anis&#39;, &#39;rk&#39;, &#39;nasdem&#39;, &#39;pks&#39;, &#39;demokrat&#39;]
+[&#39;anies&#39;, &#39;rasyid&#39;, &#39;baswedan&#39;, &#39;agus&#39;, &#39;harimurti&#39;, &#39;yudhoyono&#39;]
+[&#39;senang&#39;, &#39;yohanes&#39;, &#39;gagal&#39;, &#39;nyapres&#39;, &#39;pilpres&#39;, &#39;aman&#39;, &#39;damai&#39;, &#39;demo&#39;, &#39;ber&#39;, &#39;jilid&#39;, &#39;takbeer&#39;, &#39;persekusi&#39;, &#39;terror&#39;, &#39;masyarakat&#39;, &#39;pilkada&#39;, &#39;dki&#39;, &#39;pilpres&#39;, &#39;aman&#39;, &#39;damai&#39;, &#39;capres&#39;, &#39;yohanes&#39;]
 [&#39;golkar&#39;, &#39;berani&#39;, &#39;mandiri&#39;, &#39;ekor&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;gprk&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;aerlangga&#39;, &#39;cak&#39;, &#39;imin&#39;, &#39;vs&#39;, &#39;prabowo&#39;, &#39;erik&#39;, &#39;vs&#39;, &#39;ganjar&#39;, &#39;sandi&#39;, &#39;vs&#39;, &#39;anies&#39;, &#39;ahy&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;biar&#39;, &#39;pelangar&#39;, &#39;ham&#39;, &#39;berat&#39;, &#39;pimpin&#39;, &#39;negriii&#39;, &#39;koruptor&#39;, &#39;e&#39;, &#39;ktp&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;aniss&#39;, &#39;sang&#39;, &#39;satrioo&#39;, &#39;paningit&#39;, &#39;bawa&#39;, &#39;kemakmutan&#39;, &#39;jaya&#39;, &#39;indonesia&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;satrio&#39;, &#39;pingit&#39;, &#39;yaman&#39;]
+[&#39;gprk&#39;]
+[&#39;aerlangga&#39;, &#39;cak&#39;, &#39;imin&#39;, &#39;vs&#39;, &#39;prabowo&#39;, &#39;erik&#39;, &#39;vs&#39;, &#39;ganjar&#39;, &#39;sandi&#39;, &#39;vs&#39;, &#39;anies&#39;, &#39;ahy&#39;]
+[&#39;biar&#39;, &#39;pelangar&#39;, &#39;ham&#39;, &#39;berat&#39;, &#39;pimpin&#39;, &#39;negriii&#39;, &#39;koruptor&#39;, &#39;e&#39;, &#39;ktp&#39;]
+[&#39;aniss&#39;, &#39;sang&#39;, &#39;satrioo&#39;, &#39;paningit&#39;, &#39;bawa&#39;, &#39;kemakmutan&#39;, &#39;jaya&#39;, &#39;indonesia&#39;]
+[&#39;satrio&#39;, &#39;pingit&#39;, &#39;yaman&#39;]
 [&#39;bos&#39;, &#39;men&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;inti&#39;, &#39;rakyat&#39;, &#39;butuh&#39;, &#39;annis&#39;, &#39;baswedan&#39;]
+[&#39;inti&#39;, &#39;rakyat&#39;, &#39;butuh&#39;, &#39;annis&#39;, &#39;baswedan&#39;]
 []
 [&#39;rakyat&#39;, &#39;adil&#39;, &#39;golong&#39;, &#39;rakyat&#39;, &#39;ubah&#39;, &#39;cebong&#39;, &#39;takut&#39;]
 [&#39;rakyat&#39;, &#39;bro&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;poros&#39;, &#39;poros&#39;, &#39;menang&#39;, &#39;anda&#39;, &#39;tum&#39;, &#39;partai&#39;, &#39;calon&#39;, &#39;ahok&#39;, &#39;sgb&#39;, &#39;capres&#39;, &#39;ahok&#39;, &#39;sosok&#39;, &#39;kenal&#39;, &#39;luas&#39;, &#39;integritas&#39;, &#39;popularitas&#39;, &#39;indonesia&#39;, &#39;internasional&#39;, &#39;beda&#39;, &#39;nasional&#39;, &#39;regional&#39;, &#39;mudah&#39;, &#39;murah&#39;, &#39;menang&#39;, &#39;maju&#39;, &#39;nkri&#39;, &#39;naik&#39;, &#39;elektabilitas&#39;, &#39;partai&#39;, &#39;ahok&#39;, &#39;restu&#39;, &#39;mendiang&#39;, &#39;gus&#39;, &#39;dur&#39;, &#39;dukung&#39;, &#39;penuh&#39;, &#39;nu&#39;, &#39;ormas&#39;, &#39;besar&#39;, &#39;dunia&#39;, &#39;heran&#39;, &#39;partai&#39;, &#39;berani&#39;, &#39;calon&#39;, &#39;usung&#39;, &#39;ahok&#39;, &#39;reformasi&#39;, &#39;total&#39;, &#39;ahok&#39;, &#39;dicapreskan&#39;, &#39;partai&#39;, &#39;hak&#39;, &#39;mencapreskannya&#39;, &#39;penting&#39;, &#39;nasional&#39;, &#39;biar&#39;, &#39;presiden&#39;, &#39;republik&#39;, &#39;indonesia&#39;, &#39;jadi&#39;, &#39;tugas&#39;, &#39;partai&#39;, &#39;sakit&#39;, &#39;hati&#39;, &#39;rakyat&#39;, &#39;rendah&#39;, &#39;martabat&#39;, &#39;bangsa&#39;, &#39;indonesia&#39;, &#39;presiden&#39;, &#39;pilih&#39;, &#39;langsung&#39;, &#39;rakyat&#39;, &#39;tanggung&#39;, &#39;langsung&#39;, &#39;rakyat&#39;, &#39;tum&#39;, &#39;partai&#39;, &#39;partai&#39;, &#39;rakyat&#39;, &#39;kembaikan&#39;, &#39;daulat&#39;, &#39;rakyat&#39;, &#39;anies&#39;, &#39;ahy&#39;, &#39;vs&#39;, &#39;prabowo&#39;, &#39;muhaimin&#39;, &#39;vs&#39;, &#39;ganjar&#39;, &#39;erik&#39;, &#39;vs&#39;, &#39;ahok&#39;, &#39;mahfud&#39;, &#39;pilih&#39;, &#39;kualitas&#39;, &#39;indonesia&#39;, &#39;presiden&#39;, &#39;kualitas&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;prasetyo&#39;, &#39;insani&#39;, &#39;agama&#39;, &#39;penting&#39;, &#39;politik&#39;, &#39;agama&#39;, &#39;kubu&#39;, &#39;penting&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ahoknya&#39;, &#39;ogah&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;turahan&#39;, &#39;bayar&#39;, &#39;lembaga&#39;, &#39;survey&#39;, &#39;nya&#39;, &#39;ogah&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ahok&#39;, &#39;bayar&#39;, &#39;lembaga&#39;, &#39;survey&#39;, &#39;kali&#39;, &#39;bayar&#39;, &#39;tuju&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;turahan&#39;, &#39;lembaga&#39;, &#39;survey&#39;, &#39;pikir&#39;, &#39;nama&#39;, &#39;ahok&#39;, &#39;list&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;pusing&#39;, &#39;calon&#39;, &#39;anies&#39;, &#39;baswedan&#39;, &#39;ganjar&#39;, &#39;pranowo&#39;, &#39;prabowo&#39;, &#39;subianti&#39;, &#39;airlangga&#39;, &#39;harta&#39;, &#39;pilih&#39;, &#39;rakyat&#39;]
+[&#39;poros&#39;, &#39;poros&#39;, &#39;menang&#39;, &#39;anda&#39;, &#39;tum&#39;, &#39;partai&#39;, &#39;calon&#39;, &#39;ahok&#39;, &#39;sgb&#39;, &#39;capres&#39;, &#39;ahok&#39;, &#39;sosok&#39;, &#39;kenal&#39;, &#39;luas&#39;, &#39;integritas&#39;, &#39;popularitas&#39;, &#39;indonesia&#39;, &#39;internasional&#39;, &#39;beda&#39;, &#39;nasional&#39;, &#39;regional&#39;, &#39;mudah&#39;, &#39;murah&#39;, &#39;menang&#39;, &#39;maju&#39;, &#39;nkri&#39;, &#39;naik&#39;, &#39;elektabilitas&#39;, &#39;partai&#39;, &#39;ahok&#39;, &#39;restu&#39;, &#39;mendiang&#39;, &#39;gus&#39;, &#39;dur&#39;, &#39;dukung&#39;, &#39;penuh&#39;, &#39;nu&#39;, &#39;ormas&#39;, &#39;besar&#39;, &#39;dunia&#39;, &#39;heran&#39;, &#39;partai&#39;, &#39;berani&#39;, &#39;calon&#39;, &#39;usung&#39;, &#39;ahok&#39;, &#39;reformasi&#39;, &#39;total&#39;, &#39;ahok&#39;, &#39;dicapreskan&#39;, &#39;partai&#39;, &#39;hak&#39;, &#39;mencapreskannya&#39;, &#39;penting&#39;, &#39;nasional&#39;, &#39;biar&#39;, &#39;presiden&#39;, &#39;republik&#39;, &#39;indonesia&#39;, &#39;jadi&#39;, &#39;tugas&#39;, &#39;partai&#39;, &#39;sakit&#39;, &#39;hati&#39;, &#39;rakyat&#39;, &#39;rendah&#39;, &#39;martabat&#39;, &#39;bangsa&#39;, &#39;indonesia&#39;, &#39;presiden&#39;, &#39;pilih&#39;, &#39;langsung&#39;, &#39;rakyat&#39;, &#39;tanggung&#39;, &#39;langsung&#39;, &#39;rakyat&#39;, &#39;tum&#39;, &#39;partai&#39;, &#39;partai&#39;, &#39;rakyat&#39;, &#39;kembaikan&#39;, &#39;daulat&#39;, &#39;rakyat&#39;, &#39;anies&#39;, &#39;ahy&#39;, &#39;vs&#39;, &#39;prabowo&#39;, &#39;muhaimin&#39;, &#39;vs&#39;, &#39;ganjar&#39;, &#39;erik&#39;, &#39;vs&#39;, &#39;ahok&#39;, &#39;mahfud&#39;, &#39;pilih&#39;, &#39;kualitas&#39;, &#39;indonesia&#39;, &#39;presiden&#39;, &#39;kualitas&#39;]
+[&#39;prasetyo&#39;, &#39;insani&#39;, &#39;agama&#39;, &#39;penting&#39;, &#39;politik&#39;, &#39;agama&#39;, &#39;kubu&#39;, &#39;penting&#39;]
+[&#39;ahoknya&#39;, &#39;ogah&#39;]
+[&#39;turahan&#39;, &#39;bayar&#39;, &#39;lembaga&#39;, &#39;survey&#39;, &#39;nya&#39;, &#39;ogah&#39;]
+[&#39;ahok&#39;, &#39;bayar&#39;, &#39;lembaga&#39;, &#39;survey&#39;, &#39;kali&#39;, &#39;bayar&#39;, &#39;tuju&#39;]
+[&#39;turahan&#39;, &#39;lembaga&#39;, &#39;survey&#39;, &#39;pikir&#39;, &#39;nama&#39;, &#39;ahok&#39;, &#39;list&#39;]
+[&#39;pusing&#39;, &#39;calon&#39;, &#39;anies&#39;, &#39;baswedan&#39;, &#39;ganjar&#39;, &#39;pranowo&#39;, &#39;prabowo&#39;, &#39;subianti&#39;, &#39;airlangga&#39;, &#39;harta&#39;, &#39;pilih&#39;, &#39;rakyat&#39;]
 [&#39;ujung&#39;, &#39;ujung&#39;, &#39;poros&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;apa&#39;, &#39;partai&#39;, &#39;nasdem&#39;, &#39;perintah&#39;, &#39;partai&#39;, &#39;gurem&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;poros&#39;, &#39;koalisi&#39;, &#39;ubah&#39;, &#39;bubar&#39;, &#39;koalisi&#39;, &#39;prabowo&#39;, &#39;bentuk&#39;, &#39;anies&#39;, &#39;ahy&#39;, &#39;buang&#39;, &#39;gelandang&#39;, &#39;politik&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;usul&#39;, &#39;quot&#39;, &#39;ganjar&#39;, &#39;erick&#39;, &#39;quot&#39;, &#39;poros&#39;]
+[&#39;apa&#39;, &#39;partai&#39;, &#39;nasdem&#39;, &#39;perintah&#39;, &#39;partai&#39;, &#39;gurem&#39;]
+[&#39;poros&#39;, &#39;koalisi&#39;, &#39;ubah&#39;, &#39;bubar&#39;, &#39;koalisi&#39;, &#39;prabowo&#39;, &#39;bentuk&#39;, &#39;anies&#39;, &#39;ahy&#39;, &#39;buang&#39;, &#39;gelandang&#39;, &#39;politik&#39;]
+[&#39;usul&#39;, &#39;quot&#39;, &#39;ganjar&#39;, &#39;erick&#39;, &#39;quot&#39;, &#39;poros&#39;]
 [&#39;poros&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;golkar&#39;, &#39;jadi&#39;, &#39;poros&#39;, &#39;ridwan&#39;, &#39;kamil&#39;, &#39;erick&#39;, &#39;thohir&#39;, &#39;biar&#39;, &#39;goncang&#39;, &#39;geger&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;tuju&#39;, &#39;ayo&#39;, &#39;bikin&#39;, &#39;poros&#39;, &#39;ridwan&#39;, &#39;kamil&#39;, &#39;eric&#39;, &#39;thohir&#39;, &#39;the&#39;, &#39;black&#39;, &#39;horse&#39;]
+[&#39;golkar&#39;, &#39;jadi&#39;, &#39;poros&#39;, &#39;ridwan&#39;, &#39;kamil&#39;, &#39;erick&#39;, &#39;thohir&#39;, &#39;biar&#39;, &#39;goncang&#39;, &#39;geger&#39;]
+[&#39;tuju&#39;, &#39;ayo&#39;, &#39;bikin&#39;, &#39;poros&#39;, &#39;ridwan&#39;, &#39;kamil&#39;, &#39;eric&#39;, &#39;thohir&#39;, &#39;the&#39;, &#39;black&#39;, &#39;horse&#39;]
 [&#39;bond&#39;, &#39;biar&#39;, &#39;seru&#39;, &#39;kalo&#39;, &#39;poros&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;usung&#39;, &#39;erik&#39;, &#39;pasang&#39;, &#39;prabowo&#39;, &#39;golkar&#39;, &#39;koalisi&#39;, &#39;pkb&#39;, &#39;usung&#39;, &#39;aerlangga&#39;, &#39;cak&#39;, &#39;imin&#39;, &#39;menang&#39;, &#39;pilpres&#39;, &#39;menjg&#39;, &#39;marwah&#39;, &#39;partai&#39;, &#39;mendptkan&#39;, &#39;kotail&#39;, &#39;efek&#39;, &#39;terjd&#39;, &#39;poros&#39;, &#39;romahurmuzy&#39;, &#39;podcast&#39;, &#39;akbar&#39;, &#39;faizal&#39;, &#39;kalo&#39;, &#39;melht&#39;, &#39;dinamika&#39;, &#39;masuk&#39;, &#39;akal&#39;, &#39;kecuali&#39;, &#39;demokrat&#39;, &#39;copet&#39;, &#39;muldoko&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;inspirator&#39;, &#39;negeri&#39;, &#39;pilpres&#39;, &#39;aman&#39;, &#39;sejuk&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;iya&#39;, &#39;hehe&#39;, &#39;ayo&#39;, &#39;bikin&#39;, &#39;poros&#39;, &#39;sih&#39;, &#39;dukung&#39;, &#39;ridwan&#39;, &#39;kamil&#39;, &#39;maju&#39;, &#39;capres&#39;, &#39;golkar&#39;, &#39;erick&#39;, &#39;thohir&#39;, &#39;jawa&#39;, &#39;barat&#39;, &#39;satu&#39;, &#39;sunda&#39;, &#39;satu&#39;, &#39;suporter&#39;, &#39;bola&#39;, &#39;indonesia&#39;, &#39;satu&#39;, &#39;masyarakat&#39;, &#39;indonesia&#39;, &#39;presiden&#39;, &#39;mileneal&#39;]
+[&#39;usung&#39;, &#39;erik&#39;, &#39;pasang&#39;, &#39;prabowo&#39;, &#39;golkar&#39;, &#39;koalisi&#39;, &#39;pkb&#39;, &#39;usung&#39;, &#39;aerlangga&#39;, &#39;cak&#39;, &#39;imin&#39;, &#39;menang&#39;, &#39;pilpres&#39;, &#39;menjg&#39;, &#39;marwah&#39;, &#39;partai&#39;, &#39;mendptkan&#39;, &#39;kotail&#39;, &#39;efek&#39;, &#39;terjd&#39;, &#39;poros&#39;, &#39;romahurmuzy&#39;, &#39;podcast&#39;, &#39;akbar&#39;, &#39;faizal&#39;, &#39;kalo&#39;, &#39;melht&#39;, &#39;dinamika&#39;, &#39;masuk&#39;, &#39;akal&#39;, &#39;kecuali&#39;, &#39;demokrat&#39;, &#39;copet&#39;, &#39;muldoko&#39;]
+[&#39;inspirator&#39;, &#39;negeri&#39;, &#39;pilpres&#39;, &#39;aman&#39;, &#39;sejuk&#39;]
+[&#39;iya&#39;, &#39;hehe&#39;, &#39;ayo&#39;, &#39;bikin&#39;, &#39;poros&#39;, &#39;sih&#39;, &#39;dukung&#39;, &#39;ridwan&#39;, &#39;kamil&#39;, &#39;maju&#39;, &#39;capres&#39;, &#39;golkar&#39;, &#39;erick&#39;, &#39;thohir&#39;, &#39;jawa&#39;, &#39;barat&#39;, &#39;satu&#39;, &#39;sunda&#39;, &#39;satu&#39;, &#39;suporter&#39;, &#39;bola&#39;, &#39;indonesia&#39;, &#39;satu&#39;, &#39;masyarakat&#39;, &#39;indonesia&#39;, &#39;presiden&#39;, &#39;mileneal&#39;]
 [&#39;ppp&#39;, &#39;susul&#39;, &#39;hanura&#39;, &#39;suara&#39;, &#39;hilang&#39;, &#39;parlemen&#39;, &#39;usung&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;poros&#39;, &#39;peluang&#39;, &#39;koalisi&#39;, &#39;habis&#39;, &#39;koalisi&#39;, &#39;bubar&#39;, &#39;oposisi&#39;, &#39;kib&#39;, &#39;ujung&#39;, &#39;ganjar&#39;]
+[&#39;poros&#39;, &#39;peluang&#39;, &#39;koalisi&#39;, &#39;habis&#39;, &#39;koalisi&#39;, &#39;bubar&#39;, &#39;oposisi&#39;, &#39;kib&#39;, &#39;ujung&#39;, &#39;ganjar&#39;]
 [&#39;bador&#39;, &#39;parah&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;turahan&#39;, &#39;budak&#39;, &#39;partai&#39;]
+[&#39;turahan&#39;, &#39;budak&#39;, &#39;partai&#39;]
 [&#39;biar&#39;, &#39;presiden&#39;, &#39;republik&#39;, &#39;indonesa&#39;, &#39;tugas&#39;, &#39;partai&#39;]
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-16-63f9ef697a47&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>   <span class="n">katastem</span><span class="o">=</span><span class="p">[]</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>   <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="n">stopword</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
-<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="n">katastem</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>   <span class="n">stemming</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">katastem</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>   <span class="nb">print</span><span class="p">(</span><span class="n">katastem</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/CachedStemmer.py</span> in <span class="ni">stem</span><span class="nt">(self, text)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>                 <span class="n">stems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>             <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">20</span>                 <span class="n">stem</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delegatedStemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">stem</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>                 <span class="n">stems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stem</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Stemmer.py</span> in <span class="ni">stem</span><span class="nt">(self, text)</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> 
-<span class="g g-Whitespace">     </span><span class="mi">26</span>         <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">27</span>             <span class="n">stems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stem_word</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span> 
-<span class="g g-Whitespace">     </span><span class="mi">29</span>         <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">stems</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Stemmer.py</span> in <span class="ni">stem_word</span><span class="nt">(self, word)</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stem_plural_word</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span>         <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">36</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stem_singular_word</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">37</span> 
-<span class="g g-Whitespace">     </span><span class="mi">38</span>     <span class="k">def</span> <span class="nf">is_plural</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Stemmer.py</span> in <span class="ni">stem_singular_word</span><span class="nt">(self, word)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;Stem a singular word to its common stem form.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span>         <span class="n">context</span> <span class="o">=</span> <span class="n">Context</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">visitor_provider</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">84</span>         <span class="n">context</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span> 
-<span class="g g-Whitespace">     </span><span class="mi">86</span>         <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="n">result</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">execute</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span> 
-<span class="g g-Whitespace">     </span><span class="mi">36</span>         <span class="c1">#step 1 - 5</span>
-<span class="ne">---&gt; </span><span class="mi">37</span>         <span class="bp">self</span><span class="o">.</span><span class="n">start_stemming_process</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span> 
-<span class="g g-Whitespace">     </span><span class="mi">39</span>         <span class="c1">#step 6</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">start_stemming_process</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">73</span> 
-<span class="g g-Whitespace">     </span><span class="mi">74</span>         <span class="c1">#step 2, 3</span>
-<span class="ne">---&gt; </span><span class="mi">75</span>         <span class="bp">self</span><span class="o">.</span><span class="n">remove_suffixes</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">76</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span>             <span class="k">return</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">remove_suffixes</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span> 
-<span class="g g-Whitespace">     </span><span class="mi">93</span>     <span class="k">def</span> <span class="nf">remove_suffixes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">94</span>         <span class="bp">self</span><span class="o">.</span><span class="n">accept_visitors</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">suffix_visitors</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span> 
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">def</span> <span class="nf">accept</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visitor</span><span class="p">):</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">accept_visitors</span><span class="nt">(self, visitors)</span>
-<span class="g g-Whitespace">    </span><span class="mi">100</span>         <span class="k">for</span> <span class="n">visitor</span> <span class="ow">in</span> <span class="n">visitors</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span>             <span class="bp">self</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">visitor</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">102</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">103</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_word</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_is_stopped</span><span class="p">:</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+[&#39;capres&#39;, &#39;cawapres&#39;, &#39;lingkar&#39;, &#39;jkw&#39;, &#39;gub&#39;, &#39;palestina&#39;, &#39;wowo&#39;, &#39;airlangga&#39;, &#39;erik&#39;, &#39;sandi&#39;, &#39;mpud&#39;, &#39;gue&#39;, &#39;pilih&#39;]
+[&#39;ngaruh&#39;, &#39;opi&#39;, &#39;untunge&#39;, &#39;awak&#39;, &#39;entar&#39;, &#39;tukang&#39;, &#39;ngathong&#39;, &#39;belaka&#39;]
+[&#39;lu&#39;, &#39;mati&#39;, &#39;ngaruh&#39;, &#39;lu&#39;, &#39;kaca&#39;, &#39;lu&#39;, &#39;ya&#39;, &#39;muka&#39;, &#39;jelek&#39;]
+[&#39;iya&#39;, &#39;orang&#39;, &#39;buzzer&#39;, &#39;anis&#39;]
 </pre></div>
 </div>
 </div>
