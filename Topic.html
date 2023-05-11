@@ -208,6 +208,37 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/Topic.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -683,7 +714,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7649a22b-b19b-4176-8c23-6803b1476f7c">
+  <div id="df-d14d89ae-f366-4b42-8264-f6f3aeec02c1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1098,7 +1129,7 @@ document.write(`
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7649a22b-b19b-4176-8c23-6803b1476f7c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d14d89ae-f366-4b42-8264-f6f3aeec02c1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1149,12 +1180,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7649a22b-b19b-4176-8c23-6803b1476f7c button.colab-df-convert');
+          document.querySelector('#df-d14d89ae-f366-4b42-8264-f6f3aeec02c1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7649a22b-b19b-4176-8c23-6803b1476f7c');
+          const element = document.querySelector('#df-d14d89ae-f366-4b42-8264-f6f3aeec02c1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1195,7 +1226,17 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packages (1.0.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting Sastrawi
+  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">14.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: Sastrawi
+Successfully installed Sastrawi-1.0.1
 </pre></div>
 </div>
 </div>
@@ -1218,11 +1259,10 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
-[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data]   Unzipping corpora/stopwords.zip.
 [nltk_data] Downloading package wordnet to /root/nltk_data...
-[nltk_data]   Package wordnet is already up-to-date!
 [nltk_data] Downloading package punkt to /root/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
+[nltk_data]   Unzipping tokenizers/punkt.zip.
 </pre></div>
 </div>
 </div>
@@ -1236,7 +1276,7 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-393f34aa-24ea-4750-9837-79a967b22c98">
+  <div id="df-6c016c8a-e07d-4c4c-962d-f6a39b0fcc30">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1644,7 +1684,7 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-393f34aa-24ea-4750-9837-79a967b22c98')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6c016c8a-e07d-4c4c-962d-f6a39b0fcc30')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1695,12 +1735,12 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 
       <script>
         const buttonEl =
-          document.querySelector('#df-393f34aa-24ea-4750-9837-79a967b22c98 button.colab-df-convert');
+          document.querySelector('#df-6c016c8a-e07d-4c4c-962d-f6a39b0fcc30 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-393f34aa-24ea-4750-9837-79a967b22c98');
+          const element = document.querySelector('#df-6c016c8a-e07d-4c4c-962d-f6a39b0fcc30');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1743,7 +1783,7 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-27311aed-8d70-4e23-b070-01a2e4be8cf8">
+  <div id="df-a6fe7f3c-f6b7-4277-b4a5-2ec690ce2eef">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1986,7 +2026,7 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-27311aed-8d70-4e23-b070-01a2e4be8cf8')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a6fe7f3c-f6b7-4277-b4a5-2ec690ce2eef')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2037,12 +2077,12 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 
       <script>
         const buttonEl =
-          document.querySelector('#df-27311aed-8d70-4e23-b070-01a2e4be8cf8 button.colab-df-convert');
+          document.querySelector('#df-a6fe7f3c-f6b7-4277-b4a5-2ec690ce2eef button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-27311aed-8d70-4e23-b070-01a2e4be8cf8');
+          const element = document.querySelector('#df-a6fe7f3c-f6b7-4277-b4a5-2ec690ce2eef');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2081,7 +2121,7 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-60c8032b-ee73-4252-b1f1-fefac75c7ffd">
+  <div id="df-67b107f5-379e-4ac3-afb8-38ced0afa406">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2324,7 +2364,7 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-60c8032b-ee73-4252-b1f1-fefac75c7ffd')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-67b107f5-379e-4ac3-afb8-38ced0afa406')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2375,12 +2415,12 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 
       <script>
         const buttonEl =
-          document.querySelector('#df-60c8032b-ee73-4252-b1f1-fefac75c7ffd button.colab-df-convert');
+          document.querySelector('#df-67b107f5-379e-4ac3-afb8-38ced0afa406 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-60c8032b-ee73-4252-b1f1-fefac75c7ffd');
+          const element = document.querySelector('#df-67b107f5-379e-4ac3-afb8-38ced0afa406');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2431,7 +2471,19 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packag
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-packages (0.3.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting indoNLP
+  Downloading indoNLP-0.3.4-py3-none-any.whl (121 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/121.9 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">121.9/121.9 kB</span> <span class=" -Color -Color-Red">12.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: indoNLP
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed indoNLP-0.3.4
 </pre></div>
 </div>
 </div>
@@ -2468,7 +2520,7 @@ Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-package
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5e6e4dca-b3ae-4fc9-91db-fc419656a0e0">
+  <div id="df-90957292-b170-4cef-83fb-5746b6a9fb70">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2711,7 +2763,7 @@ Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-package
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-5e6e4dca-b3ae-4fc9-91db-fc419656a0e0')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-90957292-b170-4cef-83fb-5746b6a9fb70')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2762,12 +2814,12 @@ Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-package
 
       <script>
         const buttonEl =
-          document.querySelector('#df-5e6e4dca-b3ae-4fc9-91db-fc419656a0e0 button.colab-df-convert');
+          document.querySelector('#df-90957292-b170-4cef-83fb-5746b6a9fb70 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-5e6e4dca-b3ae-4fc9-91db-fc419656a0e0');
+          const element = document.querySelector('#df-90957292-b170-4cef-83fb-5746b6a9fb70');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3066,9 +3118,7 @@ Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-package
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;iya&#39;, &#39;hehe&#39;, &#39;ayo&#39;, &#39;bikin&#39;, &#39;poros&#39;, &#39;sih&#39;, &#39;dukung&#39;, &#39;ridwan&#39;, &#39;kamil&#39;, &#39;maju&#39;, &#39;capres&#39;, &#39;golkar&#39;, &#39;erick&#39;, &#39;thohir&#39;, &#39;jawa&#39;, &#39;barat&#39;, &#39;satu&#39;, &#39;sunda&#39;, &#39;satu&#39;, &#39;suporter&#39;, &#39;bola&#39;, &#39;indonesia&#39;, &#39;satu&#39;, &#39;masyarakat&#39;, &#39;indonesia&#39;, &#39;presiden&#39;, &#39;mileneal&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ppp&#39;, &#39;susul&#39;, &#39;hanura&#39;, &#39;suara&#39;, &#39;hilang&#39;, &#39;parlemen&#39;, &#39;usung&#39;]
+[&#39;ppp&#39;, &#39;susul&#39;, &#39;hanura&#39;, &#39;suara&#39;, &#39;hilang&#39;, &#39;parlemen&#39;, &#39;usung&#39;]
 [&#39;poros&#39;, &#39;peluang&#39;, &#39;koalisi&#39;, &#39;habis&#39;, &#39;koalisi&#39;, &#39;bubar&#39;, &#39;oposisi&#39;, &#39;kib&#39;, &#39;ujung&#39;, &#39;ganjar&#39;]
 </pre></div>
 </div>
@@ -3076,12 +3126,7 @@ Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-package
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;turahan&#39;, &#39;budak&#39;, &#39;partai&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;biar&#39;, &#39;presiden&#39;, &#39;republik&#39;, &#39;indonesa&#39;, &#39;tugas&#39;, &#39;partai&#39;]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;capres&#39;, &#39;cawapres&#39;, &#39;lingkar&#39;, &#39;jkw&#39;, &#39;gub&#39;, &#39;palestina&#39;, &#39;wowo&#39;, &#39;airlangga&#39;, &#39;erik&#39;, &#39;sandi&#39;, &#39;mpud&#39;, &#39;gue&#39;, &#39;pilih&#39;]
+[&#39;biar&#39;, &#39;presiden&#39;, &#39;republik&#39;, &#39;indonesa&#39;, &#39;tugas&#39;, &#39;partai&#39;]
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
@@ -3142,11 +3187,25 @@ Requirement already satisfied: indoNLP in /usr/local/lib/python3.10/dist-package
 <span class="g g-Whitespace">     </span><span class="mi">91</span>                 <span class="k">return</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">accept_prefix_visitors</span><span class="nt">(self, visitors)</span>
+<span class="g g-Whitespace">    </span><span class="mi">108</span>         <span class="n">removalCount</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">removals</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">109</span>         <span class="k">for</span> <span class="n">visitor</span> <span class="ow">in</span> <span class="n">visitors</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">110</span>             <span class="bp">self</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">visitor</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">111</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">110</span>             <span class="bp">self</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">visitor</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">112</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_word</span>
-<span class="g g-Whitespace">    </span><span class="mi">113</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_is_stopped</span><span class="p">:</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">accept</span><span class="nt">(self, visitor)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span> 
+<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">def</span> <span class="nf">accept</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visitor</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">97</span>         <span class="n">visitor</span><span class="o">.</span><span class="n">visit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span> 
+<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="k">def</span> <span class="nf">accept_visitors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visitors</span><span class="p">):</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/Sastrawi/Stemmer/Context/Visitor/AbstractDisambiguatePrefixRule.py</span> in <span class="ni">visit</span><span class="nt">(self, context)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="k">for</span> <span class="n">disambiguator</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">disambiguators</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">disambiguator</span><span class="o">.</span><span class="n">disambiguate</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">current_word</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">15</span>             <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>                 <span class="k">break</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> 
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
